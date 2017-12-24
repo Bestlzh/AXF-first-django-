@@ -1,0 +1,27 @@
+{% extends 'App/Base.html' %}
+{% load static %}
+{% block personResource %}
+    <style>
+        .success{
+
+            height: 100%;
+            width: 100%;
+            padding-top: 3rem;
+            line-height: 10rem;
+            text-align: center;
+
+        }
+    </style>
+    <script>
+{#    2秒后自动跳转到登录页面#}
+    var page ="{% url 'axf:login' %}"
+    window.setTimeout('window.location=page',2000);
+
+    </script>
+{% endblock %}
+
+{% block content %}
+<div class="success">
+    操作成功！将为你跳转......
+</div>
+{% endblock %}

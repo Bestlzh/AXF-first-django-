@@ -1,0 +1,41 @@
+#login{
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+#loginTop{
+    height:1rem;
+    width: 100%;
+    font-size: 0.5rem;
+    color: black;
+    /*text-align: center;*/
+}
+#loginTop p{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+}
+.goRegister{
+    font-size: 0.2rem;
+    float: right;
+    color: #2aabd2;
+}
+.submit{
+    padding-top: 0.5rem;
+    height: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.input-group{
+    height: 0.8rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.3rem;
+    line-height:0.8rem ;
+}
+.input-group .theText{
+
+    border: 1px blue solid;
+    border-radius: 0.5rem;
+}

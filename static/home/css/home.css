@@ -1,0 +1,188 @@
+footer .home span {
+    background: url(/static/base/img/home1.png) no-repeat;
+    background-size: 0.513889rem;
+}
+
+footer .home {
+    color: gold;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 7rem;
+
+}
+
+#home .nav {
+    width: 100%;
+    height: 3rem;
+    background: white;
+}
+
+#home .nav .navdiv{
+    width: 25%;
+    height:2.2rem;
+    /*background: red;*/
+    float: left;
+}
+#home .nav .navdiv img {
+    width: 100%;
+    height: 100%;
+}
+#home .nav .navdiv  h6{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0px;
+
+    /*height:6rem;*/
+    /*float: left;*/
+
+}
+/*#home .nav  dl{*/
+    /*padding: 0px !important;*/
+    /*margin: 0px!important;*/
+/*}*/
+
+
+/*#swiperMenu {*/
+    /*width: 100%;*/
+    /*height: 2.5rem;*/
+/*}*/
+#swiperMustBuy{
+
+    width: 100%;
+    height:3rem;
+}
+
+/*#swiperMenu img {*/
+    /*width: 100%;*/
+/*}*/
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+
+}
+.shop .shop1{
+    height:2rem;
+    width: 100%;
+}
+.shop img{
+    height: 100%;
+    width: 100%;
+}
+.shop .shop2{
+
+    height: 3rem;
+    width: 50%;
+    float: left;
+}
+
+.shop .shop3{
+
+    height: 2.5rem;
+    background: white;
+    width: 25%;
+    float: left;
+}
+
+
+.shop .shopp p{
+    height:0.5rem ;
+    width: 25%;
+    background: white;
+
+    text-align: center;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+.shop .shop4{
+
+    height:3rem;
+    width: 50%;
+    float: left;
+
+
+}
+.mainshow_list {
+    clear: both;
+}
+.mainshow_list .hp{
+    width: 100%;
+    height: 1rem;
+    background: white;
+    clear: both;
+
+}
+.mainshow_list .hp h3{
+    height:1rem;
+    width: 50%;
+    margin:0px ;
+    padding:0px;
+    margin-left: 3.5rem;
+    float: left;
+}
+.mainshow_list .hp a{
+    height: 1rem;
+    width: 1.5rem;
+    float: right;
+    text-align: center;
+    line-height: 1rem;
+    /*clear: both;*/
+}
+.mainshow_list .img1{
+
+    height: 4rem;
+    width: 100%;
+}
+.mainshow_list .img1 img{
+
+    height: 100%;
+    width: 100%;
+    clear: both;
+}
+.mainshow_list ul {
+    height: 6rem;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
+.mainshow_list ul li{
+    
+    height: 3.5rem;
+    width: 33.33%;
+    float: left;
+    list-style: none;
+}
+.mainshow_list ul li img{
+
+    height: 100%;
+    width: 100%;
+    clear: both;
+}
+.mainshow_list .bbb{
+    height:1.5rem;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.mainshow_list ul li p{
+    height:1.5rem;
+    width: 100%;
+    clear: both;
+
+}
+.clearfloat{
+    clear: both;
+}
+.mainshow_list ul li a{
+    height:1.5rem;
+    width: 100%;
+    clear: both;
+
+}
+
+
+

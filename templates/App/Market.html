@@ -1,0 +1,85 @@
+{% extends 'App/Base.html' %}
+{% load static %}
+{% block personResource %}
+    <link rel="stylesheet" href="{% static 'market/css/market.css' %}">
+    <script type="text/javascript" src="{% static 'market/js/market.js' %}"></script>
+    <script type="text/javascript" src="{% static 'market/js/market.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="Market">
+        <div class="leftBox">
+        <ul>
+            {% for foodtype in foodtypes %}
+                {% ifequal foodtype.typeid foodid %}
+                <li class="">
+                    <div class="yellowdiv"></div>
+                    <a href="{% url 'axf:marketcategory' foodtype.typeid  0  0%}"><div class="leftSmileBox">{{foodtype.typename}}</div></a>
+                </li>
+                {% else %}
+                <li class="">
+                    <div class="yellowdiv"></div>
+                    <a href="{% url 'axf:marketcategory' foodtype.typeid  0  0%}"><div class="">{{foodtype.typename}}</div></a>
+                </li>
+                {% endifequal %}
+            {% endfor %}
+
+        </ul>
+        </div>
+
+        <div class="topNav">
+
+                <div class="leftNav">全部分类<span class="glyphicon glyphicon-chevron-down"></span></div>
+
+                <div class="rightNav">综合排序<span class="glyphicon glyphicon-chevron-down"></span></div>
+
+        </div>
+
+
+        <div class="leftChildType">
+            {% for item in items %}
+
+            <a href="{% url 'axf:marketcategory' foodtypeid  item.childTypeId  orderRule %}"><div class="childType"><p>{{ item.childName }}</p></div></a>
+
+            {% endfor %}
+        </div>
+
+        <div class="rightOrder">
+            <a href="{% url 'axf:marketcategory' foodtypeid childcid  0  %}"><div class="orderrule"><p>综合排序</p></div></a>
+            <a href="{% url 'axf:marketcategory' foodtypeid childcid  1  %}"><div class="orderrule"><p>价格升序</p></div></a>
+            <a href="{% url 'axf:marketcategory' foodtypeid childcid  2  %}"><div class="orderrule"><p>价格降序</p></div></a>
+            <a href="{% url 'axf:marketcategory' foodtypeid childcid  3  %}"><div class="orderrule"><p>库存容量</p></div></a>
+
+
+        </div>
+
+        <div class="goodsListBox">
+            <ul>
+            
+            {% for goods in goodsList %}
+                <li>
+                    <a href="">
+                        <div class="goodsimg">
+                            <img src="{{ goods.productimg }}" alt="">
+                        </div>
+                        </a>
+                        <div class="goodInfo">
+                            <p>{{ goods.productname}}</p>
+                            <p>精选</p>
+                            <p>￥{{ goods.marketprice }}</p>
+                            <div ga="{{ goods.productid }}" class="addgoods">+</div>
+                            <span id="{{goods.productid}}" class="goodsnum">{{ i.num }}</span>
+
+{#                            <div class="goodsnum">0</div>#}
+                            <div id='{{ goods.productid }}redgoods' ga="{{ goods.productid }}" class="redgoods "><strong>-</strong></div>
+                            <p>{{ goods.specifics }}</p>
+
+                        </div>
+
+                </li>
+            {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}

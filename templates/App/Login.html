@@ -1,0 +1,39 @@
+{% extends 'App/Base.html' %}
+{% load static %}
+{% block personResource %}
+
+    <link rel="stylesheet" href="{% static 'mine/css/login.css' %}">
+
+{% endblock %}
+
+{% block content %}
+    <div id="login">
+    <div id="loginTop"><p>登录</p></div>
+    <a href="{% url 'axf:mine' %}"><p class="gogo">&lt;返回</p></a>
+    <div id="box">
+        <form action="{% url 'axf:dologin' %}" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                用户名：<input class="theText"  type="text" name="username" placeholder=" 请输入您的用户名">
+                <br />
+{#                {% if error.username.0 %}#}
+{#                <span>{{error.username.0}}</span>#}
+{#                {% endif %}#}
+            </div>
+            <div class="input-group">
+                 密 码： &nbsp;<input class="theText" type="password" name="userpassword" placeholder=" 请输入您的密码">
+                <br />
+{#                {% if error.passwd.0 %}#}
+{#                <span>{{error.passwd.0}}</span>#}
+{#                {% endif %}#}
+            </div>
+            <div class="submit">
+                <input type="submit" value="登录"/>
+            </div>
+        </form>
+        <div class="goRegister"><a href="{% url 'axf:register' %}">没有账号,去注册。</a></div>
+
+    </div>
+</div>
+
+{% endblock %}
